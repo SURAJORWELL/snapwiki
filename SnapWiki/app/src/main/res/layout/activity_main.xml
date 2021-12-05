@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_blue"
+    android:background="@color/dark_blue_s2"
     tools:context=".MainActivity">
 
     <ImageView
@@ -25,32 +25,33 @@
         android:orientation="vertical"
         android:layout_margin="10dp"
         >
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:background="@drawable/button_bg"
-            android:backgroundTint="@color/light_blue"
 
+        <Button
             android:id="@+id/idBtnSnap"
-            android:text="@string/click"
-            android:textColor="@color/white"
-            android:textAllCaps="true"
-            />
-
-        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:background="@drawable/button_bg"
-            android:backgroundTint="@color/light_blue"
-            android:id="@+id/idBtnResult"
-            android:text="@string/result"
-            android:textColor="@color/white"
+            android:fontFamily="@font/prompt"
+            android:text="@string/click"
             android:textAllCaps="true"
-            />
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/light_blue" />
+
+        <Button
+            android:id="@+id/idBtnResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_bg"
+            app:backgroundTint="@color/light_blue"
+            android:fontFamily="@font/prompt"
+            android:text="@string/result"
+            android:textAllCaps="true"
+            android:textColor="@color/white" />
 
 
     </LinearLayout>
@@ -70,10 +71,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:id="@+id/idRVSearchResults"
-
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-
+        android:layout_below="@id/idLLButton"
         />
 
 </RelativeLayout>
